@@ -4,21 +4,22 @@ services:
     runtime: docker
     repo: https://github.com
     plan: free
+    dockerCommand: odoo
     envVars:
       - key: HOST
         value: odoo-db
       - key: USER
         value: mikolasekm
       - key: PASSWORD
-        value: Mikolasek0805238984
+        value: Mikmat2008
     disk:
       name: odoo-data
       mountPath: /var/lib/odoo
       sizeGB: 1
 
-  - type: postgres
-    name: odoo-db
-    region: frankfurt
-    database: odoo
+databases:
+  - name: odoo-db
+    databaseName: odoo
     user: odoo
     plan: free
+    region: frankfurt
