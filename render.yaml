@@ -8,9 +8,9 @@ services:
       - key: HOST
         value: odoo-db
       - key: USER
-        value: odoo
+        value: mikolasekm
       - key: PASSWORD
-        value: tescotajneheslo123
+        value: Mikolasek0805238984
     disk:
       name: odoo-data
       mountPath: /var/lib/odoo
