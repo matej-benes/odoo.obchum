@@ -12,11 +12,7 @@ services:
         value: mikolasekm
       - key: PASSWORD
         value: Mikmat2008
-    disk:
-      name: odoo-data
-      mountPath: /var/lib/odoo
-      sizeGB: 1
-
+  
 databases:
   - name: odoo-db
     databaseName: odoo
