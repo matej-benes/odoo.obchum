@@ -16,7 +16,7 @@ services:
       mountPath: /var/lib/odoo
       sizeGB: 1
 
-  - type: psql
+  - type: postgres
     name: odoo-db
     region: frankfurt
     database: odoo
