@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: odoo-web
+    runtime: docker
+    repo: https://github.com
+    plan: free
+    envVars:
+      - key: HOST
+        value: odoo-db
+      - key: USER
+        value: odoo
+      - key: PASSWORD
+        value: tescotajneheslo123
+    disk:
+      name: odoo-data
+      mountPath: /var/lib/odoo
+      sizeGB: 1
+
+  - type: psql
+    name: odoo-db
+    region: frankfurt
+    database: odoo
+    user: odoo
+    plan: free
